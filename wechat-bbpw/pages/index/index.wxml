@@ -1,0 +1,45 @@
+<!--index.wxml-->
+<view class="item-list">
+  <scroll-view class="scroll" scroll-y="true" scroll-x="false" bindscrolltolower="onScrollLower">
+    <form bindsubmit="formSubmit">
+      <view class='item-question' wx:for="{{question}}" wx:for-index="$index">
+        <view wx:if="{{item.type==1}}">
+          <view class='title'>{{$index+1}}、{{item.content}}</view>
+          <radio-group name="{{item.objectId}}">
+            <view wx:for="{{item.option}}" class="group-radio">
+              <radio value="{{item.value}}">{{item.key}}</radio>
+            </view>
+          </radio-group>
+        </view>
+        <view wx:elif="{{item.type==2}}">
+          <view class='title'>{{$index+1}}、{{item.content}}</view>
+          <checkbox-group name="{{item.objectId}}">
+            <view wx:for="{{item.option}}" class="group-checkbox">
+              <checkbox value='{{item.value}}'>{{item.key}}</checkbox>
+            </view>
+          </checkbox-group>
+        </view>
+        <view wx:elif="{{item.type==3}}">
+          <view wx:for="{{item.content}}" wx:for-item="item1" wx:for-index="$index2" class="content-underline">
+            <view wx:if="{{item1 == 'underline'}}">
+              <input name="{{item.objectId+$index2}}" class='underline'></input>
+            </view>
+            <view wx:elif="{{item1 != underline}}">
+              <view wx:if="{{$index2 < 1}}">
+                <view class='title'>{{$index+1}}、{{item1}}</view>
+              </view>
+              <view wx:else="{{$index2 != 0}}">
+                <view class='title'>{{item1}}</view>
+              </view>
+            </view>
+          </view>
+          <!-- <view class="horizon"></view> -->
+        </view>
+      </view>
+      <view class="main-btn">
+        <button formType="submit">提交</button>
+        <text>{{submit_text}}</text>
+      </view>
+    </form>
+  </scroll-view>
+</view>

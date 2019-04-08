@@ -1,0 +1,110 @@
+/**index.wxss**/
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.radio {
+  transform: scale(0.7);
+}
+
+.item-question {
+  margin-top: 10rpx;
+  padding: 10px 30px;
+}
+
+.horizon {
+  width: 560rpx;
+  height: 1px;
+  background-color: #e5e5e5;
+  vertical-align: middle;
+  position: relative;
+  top: 40rpx;
+  margin: 0 auto;
+  z-index: -99;
+  float: left;
+  position: relative;
+}
+
+.title {
+  margin: 30rpx 0 0 40rpx;
+  font-size: 36rpx;
+  letter-spacing: 2px;
+  color: #4b556c;
+  font-weight: bold;
+  float: left;
+}
+
+.underline {
+  padding-top: 15px;
+  /* position: relative; *//* float: left;
+  display: inline; */
+}
+
+radio-group {
+  display: inline-block;
+}
+
+checkbox-group {
+  display: inline-block;
+}
+
+.group-radio {
+  position: relative;
+  /* float: left; */
+  display: inline;
+  color: #666;
+  font-size: 28rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  margin-left: 80rpx;
+  letter-spacing: 2rpx;
+  line-height: 40rpx;
+}
+
+.group-checkbox {
+  position: relative;
+  /* float: left; */
+  display: inline;
+  color: #666;
+  font-size: 28rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  margin-left: 80rpx;
+  letter-spacing: 2rpx;
+  line-height: 40rpx;
+}
+
+.main-btn {
+  float: right;
+  width: 100%;
+}
+
+.content-underline {
+  display: inline;
+}
+
+input {
+  width: 50px;
+  border: 0;
+  float: left;
+  border-bottom: 1px solid #000;
+  text-align: center;
+}

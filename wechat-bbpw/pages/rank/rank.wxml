@@ -1,0 +1,29 @@
+<!--pages/rank/rank.wxml-->
+<block wx:if="{{rankData.length}}">
+  <scroll-view class="container" scroll-y="true">
+    <view class="log panel">
+      <view class="log_item" wx:for="{{rankData}}" wx:for-index="$index" wx:for-item="rankItem">
+        <text class="log_start">{{$index+1}}</text>
+        <text class="log_action">{{rankItem.username}}</text>
+        <text class="log_action">{{rankItem.score}}h</text>
+      <view class="horizon"></view>
+      </view>
+    </view>
+  </scroll-view>
+  <!-- <view class="clear">
+    <button bindtap="switchModal" class="clear_btn" size="mini">清除记录</button>
+  </view> -->
+</block>
+<block wx:else>
+  <view class="nodata">
+    <image class="nodata_img" src="../../images/nodata.png"></image>
+    <text class="nodata_text">暂无记录</text>
+  </view>
+</block>
+<view class='imagePathBox' hidden="{{maskHidden == false}}">
+  <button class='baocun' bindtap='createNewImg'>保存相册，分享到朋友圈</button>
+</view>
+<view class="canvas-box">
+  <canvas style="width: 375px;height: 667px;position:fixed;top:9999px" canvas-id="mycanvas" />
+</view>
+<!-- <toast hidden="{{toastHidden}}" bindchange="hideToast">清除成功！</toast> -->
